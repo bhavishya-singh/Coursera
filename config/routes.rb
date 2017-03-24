@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
     
-  get 'categories/index'
+  get 'categories' => 'categories#index'
 
-  get 'categories/new'
+  post '/categories' => 'categories#create'
 
   get 'categories/edit'
 
-  get 'categories/create'
+  get 'categories/new'
 
   get 'categories/update'
 
