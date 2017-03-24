@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
     
+  get 'categories/index'
+
+  get 'categories/new'
+
+  get 'categories/edit'
+
+  get 'categories/create'
+
+  get 'categories/update'
+
+  get 'categories/delete'
+
   devise_for :teachers
   devise_for :users
   get 'home/index'
