@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-     puts "checkkkkkkkkkkk#{@category.id}"
   end
 
   def create
@@ -20,7 +19,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    puts "checkkkkkkkkkkk#{@category.id}"
+    # byebug
     @category.update(cat_params)
     return redirect_to "/categories"
   end

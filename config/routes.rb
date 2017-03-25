@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
     
+  get '/courses/:cat_id' => 'courses#index'
+
+  get '/courses/:cat_id/new' => 'courses#new'
+
+  post '/courses/create' => 'courses#create', as: "courses"
+
+  get '/courses/:cat_id/:id/edit' => 'courses#edit'
+
+  patch '/courses/:id/update' => 'courses#update' ,as: 'course'
+
+  put '/courses/:id/update' => 'courses#update'
+
+  delete '/courses/:cat_id/delete' => 'courses#delete' 
 
   get '/categories' => 'categories#index'
 

@@ -1,0 +1,7 @@
+<br>
+<h2><%= course.name %></h2>
+<p><%= course.introduction %></p>
+<p><%= course.description%></p>
+<%= link_to "Update", url_for(:controller => "courses", :action => "edit", :cat_id =>@category.id,:id => course.id), :method => "GET" %>
+<%= link_to "Delete", url_for(:controller => "courses", :action => "delete", :cat_id =>@category.id,:id => course.id), :method => "DELETE" %>
+<br>

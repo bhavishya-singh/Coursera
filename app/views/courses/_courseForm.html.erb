@@ -1,0 +1,10 @@
+<%= form_for(@course) do |f|%>
+<%= hidden_field_tag "course[cat_id]", "#{@category.id}"%>
+Name:
+<%= f.text_field :name%><br>
+Introduction:
+<%= f.text_area :introduction%><br>
+Description:
+<%= f.text_area :description %><br>
+<%= f.submit  %>
+<% end %>

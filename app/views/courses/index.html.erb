@@ -1,2 +1,5 @@
-<h1>Courses#index</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
+<h1>Courses for <%= @category.name%></h1>
+<% @courses.each do |course|%>
+<%= render 'course', :course => course %>
+<% end%>
+<%= link_to "Create course", url_for(:controller => "courses" ,:action => "new", :cat_id => "#{@category.id}") %>
