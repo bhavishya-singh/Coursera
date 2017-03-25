@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
     
+  get 'courses/index'
+
+  get 'courses/new'
+
+  get 'courses/edit'
+
+  get 'courses/create'
+
+  get 'courses/update'
+
+  get 'courses/delete'
+
   get '/categories' => 'categories#index'
 
   post '/categories' => 'categories#create'
