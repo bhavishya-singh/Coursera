@@ -1,4 +1,7 @@
 class CoursesController < ApplicationController
+    
+    before_action :set_cat :only[:index,:update,:create,:edit,:delete]
+
   def index
   end
 
@@ -15,5 +18,16 @@ class CoursesController < ApplicationController
   end
 
   def delete
+  end
+
+
+  private
+
+  def set_cat
+    @category = Category.find(params[:cat_id])
+  end
+
+  def course_params
+    params.require(:course).permit(:name,:introduction,:description)
   end
 end
