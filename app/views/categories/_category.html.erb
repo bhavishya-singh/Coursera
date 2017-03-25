@@ -2,4 +2,5 @@
 <h2><%= category.name %></h2>
 <p><%= category.description %></p>
 <%= link_to "Delete", url_for(:controller => "categories", :action => "delete", :id => category.id), :method => "DELETE"%>
+<%= link_to "Update", url_for(:controller => "categories", :action => "edit", :id =>category.id), :method => "GET" %>
 <br>

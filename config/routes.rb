@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
     
-  get 'categories' => 'categories#index'
+  get '/categories' => 'categories#index'
 
   post '/categories' => 'categories#create'
 
-  get 'categories/edit'
+  get '/categories/new', as: 'new_category'
 
-  get 'categories/new'
+  get '/categories/:id/edit' =>  'categories#edit', as: 'edit_category'
 
-  get 'categories/update'
+  patch '/categories/:id' => 'categories#update' , as: 'category'
 
-  get 'categories/delete'
+  put '/categories/:id' => 'categories#update'
+
+  delete '/categories/:id' => 'categories#delete'
 
   devise_for :teachers
   devise_for :users
