@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
     
-    before_action :set_cat, :only => [:new,:index,:edit,:delete,:delete]
+    before_action :set_cat, :only => [:new,:index,:edit,:delete]
     before_action :set_course, :only => [:edit,:update,:delete]
 
   def index
@@ -28,7 +28,8 @@ class CoursesController < ApplicationController
   end
 
   def delete
-    @category.courses.find(@course.id).destroy
+    # @category.courses.find(@course.id).destroy
+    @course.destroy
     return redirect_to "/courses/#{@category.id}"
   end
 

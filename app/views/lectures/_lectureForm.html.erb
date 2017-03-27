@@ -1,0 +1,10 @@
+<%= form_for(@lecture) do |f| %>
+<%= hidden_field_tag "lecture[course_id]", "#{@course.id}"%>
+Lecture No: 
+<%= f.number_field :lec_no%><br>
+Description:
+<%= f.text_area :description %><br>
+Video Link :
+<%= f.text_field :youtube_link %><br>
+<%= f.submit %>
+<% end %>

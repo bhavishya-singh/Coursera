@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lec_no: 1
+  description: MyText
+  youtube_link: MyString
+  course_id: 
+
+two:
+  lec_no: 1
+  description: MyText
+  youtube_link: MyString
+  course_id: 

@@ -1,0 +1,4 @@
+<h1> Lectures for Course : <%= @course.name %></h1>
+<% @lectures.each do |lecture| %>
+	<%= render "lectures", :lecture => lecture %>
+	<% end %>
